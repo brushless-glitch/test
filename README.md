@@ -192,7 +192,7 @@ The specific properties that each SASL mechanism provides is outlined in this ta
 | PLAIN         |             |               |
 | GSS-API       | X           | X             |
 
-### X509 Authentication
+### <a name="x509atn"></a>X509 Authentication
 
 `MONGODB-X509` is an authentication method that uses the x509 certificates from the SSL/TLS
 certificate key exchange. When the peer certificate validation happens during the SSL handshake, an
@@ -230,12 +230,10 @@ The only purpose of an arbiter is to participate in elections for replica set pr
 does not have a copy of data set, including system tables which contain user and role definitions,
 and therefore can not authenticate local users. It is possible to authenticate to arbiter using
 external authentication methods such as cluster authentication or
-[x.509 authentication](https://docs.mongodb.com/manual/tutorial/configure-x509-client-authentication/)
-and acquire a role using [x.509 authorization](#x509azn).
+[x.509 authentication](#x509atn) and acquire a role using [x.509 authorization](#x509azn).
 
 It is also possible to connect to an arbiter with limited access using the
-[localhost exception](https://docs.mongodb.com/manual/core/security-users/#localhost-exception).
-If the localhost exception is disabled using the
+[localhost auth bypass](#lhabp). If the localhost auth bypass is disabled using the
 [`enableLocalhostAuthBypass`](https://docs.mongodb.com/manual/reference/parameters/#param.enableLocalhostAuthBypass)
 option, then all non cluster-auth connections will be denied access.
 
@@ -259,7 +257,7 @@ While it is possible to create local users and roles on a data bearing shard (ma
 authentication possible), this should be avoided. All connecting clients should access members 
 via mongos only.
 
-### Localhost Auth Bypass
+### <a name="lhabp">Localhost Auth Bypass
 
 When first setting up database authentication (using the `--auth` command to start a server), there
 is a feature called `localhostAuthBypass`. The `localhostAuthBypass` allows a client to connect over
