@@ -236,7 +236,7 @@ and acquire a role using [x.509 authorization](#x509azn).
 It is also possible to connect to an arbiter with limited access using the
 [localhost exception](https://docs.mongodb.com/manual/core/security-users/#localhost-exception).
 If the localhost exception is disabled using the
-[`enableLocalhostAuthBypass`](https://docs.mongodb.com/manual/reference/parameters/#param.enableLocalhostAuthBypass
+[`enableLocalhostAuthBypass`](https://docs.mongodb.com/manual/reference/parameters/#param.enableLocalhostAuthBypass)
 option, then all non cluster-auth connections will be denied access.
 
 ### Sharding Authentication
