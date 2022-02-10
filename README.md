@@ -683,3 +683,5 @@ Refer to the following links for definitions of the Classes referenced in this d
 | `RoleName` | [mongo/db/auth/role\_name.h](https://github.com/mongodb/mongo/blob/r4.4.0/src/mongo/db/auth/role_name.h) | A typed tuple containing a named role on a particular database |
 | `User` | [mongo/db/auth/user.h](https://github.com/mongodb/mongo/blob/r4.4.0/src/mongo/db/auth/user.h) | A representation of a authorization user, including all direct and subordinte roles and their privileges and authentication restrictions |
 | `UserName` | [mongo/db/auth/user\_name.h](https://github.com/mongodb/mongo/blob/r4.4.0/src/mongo/db/auth/user_name.h) | A typed tuple containing a named user on a particular database |
+
+  ..
